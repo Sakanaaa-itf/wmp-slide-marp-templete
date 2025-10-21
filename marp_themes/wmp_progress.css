@@ -1,0 +1,253 @@
+/* @theme wmp_progress */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css");
+
+section {
+  font-family: "Arial", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+  background: #fdfaf0;
+  color: #000;
+}
+section p,
+section li,
+section blockquote {
+  line-height: inherit;
+}
+
+/* ---------- title ---------- */
+section.title {
+  position: relative;
+  background: #000;
+  color: #fdfaf0;
+  text-align: center;
+  padding: 270px 20px 0;
+}
+section.title::before {
+  content: attr(data-date) "\A 進捗報告";
+  white-space: pre-line;
+  line-height: 1.2;
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 25%;
+  background: #fdfaf0;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.title > footer {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 25%;
+  background: #fdfaf0;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- slides header / body ---------- */
+section.slides > header {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 80px;
+  background: #000;
+  color: #fdfaf0;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  font-weight: 600;
+}
+section.slides {
+  padding: 100px 20px 0;
+}
+section.slides::after {
+  display: none;
+}
+section.slides::before {
+  content: attr(data-marpit-pagination);
+  position: absolute;
+  top: 0;
+  right: 20px;
+  height: 80px;
+  line-height: 80px;
+  color: #fdfaf0;
+  font-size: 24px;
+  font-weight: 400;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ---------- headings ---------- */
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+h2 {
+  font-size: 40px;
+  margin: 0;
+}
+h3 {
+  font-size: 32px;
+  margin: 0;
+}
+h4 {
+  font-size: 28px;
+  margin: 0;
+}
+h5 {
+  font-size: 24px;
+  margin: 0;
+}
+h6 {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* ---------- lists ---------- */
+ul,
+ol {
+  margin: 0.4em 0 0.4em 1.2em;
+  padding: 0;
+}
+li {
+  margin: 0.2em 0;
+}
+ul ul,
+ol ol {
+  margin: 0.2em 0 0.2em 1.2em;
+}
+section.slides ol > li {
+  margin: 0.5em 0 !important;
+}
+
+/* ---------- blockquote ---------- */
+section > blockquote:not(:has(blockquote)) {
+  margin: 38px 0;
+  padding: 4px 32px;
+  border-left: 8px solid #6600cc;
+  background: #fae6fe;
+  color: #333;
+  font-style: italic;
+  border-radius: 4px;
+}
+
+/* ---------- code ---------- */
+pre,
+pre > code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 27px;
+  line-height: 32px;
+  white-space: pre;
+  display: block;
+  background: #e6e7f2;
+  color: #002b36;
+  padding: 4px 32px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+code {
+  background: #e6e7f2;
+  padding: 4px 10px;
+  border-radius: 3px;
+}
+
+/* ---------- tables ---------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+th,
+td {
+  border: 2px solid #666;
+  padding: 8px 12px;
+  text-align: left;
+}
+thead th {
+  background: #000;
+  color: #fdfaf0;
+}
+tbody tr:nth-child(odd) {
+  background: #f0f0f4;
+}
+
+/* ---------- images ---------- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+/* ---------- horizontal rule ---------- */
+hr {
+  border: none;
+  border-top: 4px solid #aaaaaa;
+  margin: 1.5em 0;
+}
+
+/* ---------- emphasis ---------- */
+em,
+i {
+  font-style: italic;
+}
+strong,
+b {
+  font-weight: 700;
+}
+
+/* ---------- footer logo ---------- */
+footer::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  width: 140px;
+  height: 60px;
+  background: url("https://github.com/Sakanaaa-itf/wmp-logo/blob/main/wmp_logo.png?raw=true")
+    no-repeat center/contain;
+  pointer-events: none;
+}
+
+/* ---------- footnotes ---------- */
+section blockquote blockquote blockquote {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0.2em 0 0;
+  border: 0;
+  border-top: 2px dashed #555;
+  background: transparent;
+  color: #000;
+
+  position: absolute;
+  bottom: 0;
+  left: 70px;
+  right: 170px;
+  line-height: 1.2;
+}
+sup {
+  font-size: 0.6em;
+  vertical-align: super;
+  line-height: 0;
+}
+section blockquote:empty,
+section blockquote > blockquote:empty {
+  display: none;
+}
+
+section table,
+section table th,
+section table td {
+  font-size: 24px;
+}
+
+section img {
+  display: block;
+  margin: 1em auto;
+  max-width: 1200px;
+  max-height: 500px;
+  object-fit: contain;
+}
